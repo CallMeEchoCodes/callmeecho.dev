@@ -1,0 +1,29 @@
+---
+interface Props {
+	name?: string;
+	icon?: string;
+	href?: string;
+	class?: string;
+}
+
+const { name, icon, href, class: className } = Astro.props;
+
+import { Icon } from "astro-icon/components";
+---
+
+<button class="ease-custom-1 transition-transform hover:translate-y-[-10%] active:translate-y-[10%]">
+	<a
+		href={href}
+		class={`rounded-full
+                        px-4
+                        flex
+						place-items-center
+                        py-2
+                        text-center
+                        group
+                        shadow-md
+                        ${className}`}>
+		{icon != null && <Icon name={icon} class={`${name != null ? "me-2" : ""} h-5 w-5`} />}
+		{name}
+	</a>
+</button>

@@ -1,0 +1,36 @@
+{
+	"name": "callmeecho.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^3.1.2",
+		"@astrojs/rss": "^4.0.7",
+		"@astrojs/sitemap": "^3.1.6",
+		"@astrojs/tailwind": "^5.1.0",
+		"@catppuccin/tailwindcss": "^0.1.6",
+		"@catppuccin/vscode": "^3.14.0",
+		"@fontsource/josefin-sans": "^5.0.20",
+		"@fontsource/space-mono": "^5.0.20",
+		"astro": "^4.11.5",
+		"astro-expressive-code": "^0.35.3",
+		"astro-icon": "^1.1.0",
+		"astro-seo": "^0.8.4",
+		"tailwindcss": "^3.4.4",
+		"taos": "^1.0.5"
+	},
+	"devDependencies": {
+		"@iconify-json/ic": "^1.1.17",
+		"@iconify-json/lucide": "^1.1.200",
+		"@tailwindcss/typography": "^0.5.13",
+		"prettier": "^3.3.2",
+		"prettier-plugin-astro": "^0.13.0",
+		"prettier-plugin-tailwindcss": "^0.5.14"
+	}
+}

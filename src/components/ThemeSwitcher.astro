@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button id="themeSwitcher" class="block rounded-md">
+	<Icon name="lucide:sun" class="h-8 w-8 dark:hidden" />
+	<Icon name="lucide:moon" class="hidden h-8 w-8 dark:block" />
+</button>
+
+<script is:inline>
+	document.getElementById("themeSwitcher").addEventListener("click", () => {
+		document.documentElement.classList.toggle("mocha");
+		document.documentElement.classList.toggle("latte");
+
+		const newTheme = document.documentElement.classList.contains("mocha") ? "mocha" : "latte";
+		localStorage.setItem("theme", newTheme);
+	});
+</script>

@@ -1,0 +1,8 @@
+{
+	"name": "fetcho",
+	"order": 4,
+	"description": "A simple fetch made in C++",
+	"icon": "./icon/fetcho.png",
+	"link": "https://github.com/CallMeEchoCodes/fetcho",
+	"tags": ["c++", "linux", "cli"]
+}

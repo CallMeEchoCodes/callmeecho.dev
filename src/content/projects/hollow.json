@@ -1,0 +1,8 @@
+{
+	"name": "Hollow",
+	"order": 2,
+	"description": "A mod about hollow logs and hollow promises.",
+	"icon": "./icon/hollow.png",
+	"link": "https://modrinth.com/mod/hollow",
+	"tags": ["minecraft", "java"]
+}

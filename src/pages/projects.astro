@@ -1,0 +1,47 @@
+---
+import Default from "@layouts/Default.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Default>
+	<h1
+		class="taos:opacity-0 taos:translate-y-[-100%] transition-animation pb-10 text-center font-display text-4xl font-bold duration-700">
+		Projects
+	</h1>
+
+	<div
+		class="transition-animation taos:opacity-0 grid h-full w-full items-center gap-4 delay-[800ms] duration-700 lg:px-40">
+		{
+			projects.map((project) => (
+				<a class="h-50 transition-animation w-full rounded-xl bg-crust p-4 shadow-md" href={project.data.link}>
+					<div class="grid w-full grid-cols-2 grid-rows-2 gap-2">
+						<div class="row-span-2 flex h-full w-full flex-col justify-center pt-0">
+							<h2 class="font-display text-2xl font-bold lg:text-4xl">{project.data.name}</h2>
+							<p class="text-sm sm:text-[1rem]">{project.data.description}</p>
+						</div>
+						<div class="row-span-2 flex h-full w-full flex-col items-end justify-center pt-0">
+							{project.data.icon && (
+								<Image
+									src={project.data.icon}
+									alt={project.data.name}
+									class="mb-3 md:h-20 md:w-20 h-16 w-16 rounded-md shadow-md md:block"
+								/>
+							)}
+							<div class="flex w-full sm:flex-row flex-col justify-end gap-2">
+								{project.data.tags &&
+									project.data.tags.map((tag) => (
+										<div class="place-self-end rounded-full bg-base px-4 py-1 text-xs shadow-md">
+											{tag}
+										</div>
+									))}
+							</div>
+						</div>
+					</div>
+				</a>
+			))
+		}
+	</div>
+</Default>

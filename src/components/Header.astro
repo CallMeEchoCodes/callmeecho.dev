@@ -1,0 +1,46 @@
+---
+import ThemeSwitcher from "@components/ThemeSwitcher.astro";
+import { Image } from "astro:assets";
+
+import pfp from "@assets/pfp.png";
+import Link from "@components/Link.astro";
+---
+
+<header class="">
+	<nav class="m-10 flex w-auto grid-cols-3 justify-evenly sm:justify-between">
+		<ul class="flex items-center gap-4 md:hidden">
+			<li>
+				<Image
+					alt=""
+					loading="eager"
+					src={pfp}
+					class="taos:opacity-0 h-10 w-10 rounded-full drop-shadow-hard delay-[1500ms] duration-700"
+				/>
+			</li>
+		</ul>
+
+		<ul class="flex items-center gap-4">
+			<li class="hidden md:block">
+				<Image
+					alt=""
+					loading="eager"
+					src={pfp}
+					class="taos:opacity-0 h-10 w-10 rounded-full drop-shadow-hard delay-[1500ms] duration-700"
+				/>
+			</li>
+			<li class="transition-animation taos:opacity-0 delay-[1500ms] duration-700">
+				<Link href="/">Home</Link>
+			</li>
+			<li class="transition-animation taos:opacity-0 delay-[1550ms] duration-700">
+				<Link href="/projects">Projects</Link>
+			</li>
+			<li class="transition-animation taos:opacity-0 delay-[1600ms] duration-700">
+				<Link href="/blog">Blog</Link>
+			</li>
+		</ul>
+
+		<ul class="flex place-items-center items-center gap-4">
+			<li class="taos:opacity-0 transition-animation delay-[1650ms] duration-700"><ThemeSwitcher /></li>
+		</ul>
+	</nav>
+</header>

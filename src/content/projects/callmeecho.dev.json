@@ -1,0 +1,8 @@
+{
+	"name": "callmeecho.dev",
+	"order": 1,
+	"description": "This website! Built with Astro and TailwindCSS",
+	"icon": "./icon/callmeecho.dev.png",
+	"link": "https://github.com/CallMeEchoCodes/callmeecho.dev",
+	"tags": ["astro", "tailwindcss"]
+}

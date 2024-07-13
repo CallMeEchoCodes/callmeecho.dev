@@ -1,0 +1,16 @@
+---
+interface Props {
+	href: string;
+	class?: string;
+}
+
+const { href, class: className }: Props = Astro.props;
+---
+
+<div class={className}>
+	<a
+		href={href}
+		class="bg-gradient-to-r from-text to-text bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-300 ease-in-out hover:bg-[length:100%_2px]">
+		<slot />
+	</a>
+</div>

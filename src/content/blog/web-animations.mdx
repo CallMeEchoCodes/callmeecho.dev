@@ -1,0 +1,36 @@
+---
+title: New Website and Animations
+date: July 13, 2024
+description: I finally got around to remaking my website! Here's how I made the pretty animations.
+hero: "./hero/hello-world.png"
+tags: ["webdev", "animation"]
+---
+
+Hello, world! I've been working on this website on and off for a while now, and I'm finally ready to start posting!
+
+This post is mainly a test of the blog system but I'll try to keep it somewhat interesting.
+
+## Animations
+
+I use a Tailwind plugin called [TAOS](https://versoly.com/taos) to make my animations. It can be a bit of a pain to get working but if you've seen the main page of this site, you already know it's worth it.
+
+Once it's set up, animations can be added to any element using Tailwind modifiers (think `hover:bg-blue-500` but for animations). Here's how I use it on the main page:
+
+```html title="src/pages/index.astro"
+<h1
+	class="taos:opacity-0 taos:translate-y-[-100%] transition-animation my-5 text-center font-display text-6xl font-bold duration-700">
+	Heya! I'm Echo.
+</h1>
+<p
+	class="taos:opacity-0 taos:translate-y-[100%] transition-animation pb-5 text-center text-lg delay-[900ms] duration-700">
+	I'm a developer who makes random and usually useless things for the internet.
+</p>
+```
+
+Let's break down the TAOS classes:
+
+-   The `taos:` prefix tells the plugin to apply a class while the animation hasn't been triggered.
+-   `delay-[900ms]` tells the animation to wait 900ms after being scrolled into view before starting.
+-   `duration-700` tells the animation to last 700ms.
+
+With that tiny bit of code, you can make your site look a lot more interesting. Just look at the main page!

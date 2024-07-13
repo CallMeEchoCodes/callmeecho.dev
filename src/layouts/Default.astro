@@ -1,0 +1,86 @@
+---
+import Header from "@components/Header.astro";
+import { SEO } from "astro-seo";
+
+import "@fontsource/josefin-sans";
+import "@styles/global.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title, description }: Props = Astro.props;
+---
+
+<!doctype html>
+<html class="bg-base text-text">
+	<head>
+		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== "undefined" && localStorage.getItem("theme"))
+					return localStorage.getItem("theme");
+
+				if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "mocha";
+				return "latte";
+			})();
+
+			document.documentElement.classList.add(theme);
+		</script>
+
+		<SEO
+			title={title || "CallMeEcho"}
+			description={description || "Echo's personal site"}
+			charset="utf-8"
+			openGraph={{
+				basic: {
+					type: "website",
+					url: "https://callmeecho.dev",
+					title: title || "CallMeEcho",
+					image: "https://callmeecho.dev/favicon.png",
+				},
+			}}
+			twitter={{
+				creator: "@ImCallMeEcho",
+			}}
+			extend={{
+				link: [
+					{ rel: "icon", type: "image/png", href: "/favicon.png" },
+					{ rel: "sitemap", href: "/sitemap-index.xml" },
+				],
+				meta: [
+					{
+						name: "theme-color",
+						content: "#89639B",
+					},
+					{
+						name: "twitter:title",
+						content: title || "CallMeEcho",
+					},
+					{
+						name: "twitter:description",
+						content: description || "Echo's personal site",
+					},
+					{
+						name: "viewport",
+						content: "width=device-width, initial-scale=1",
+					},
+					{
+						name: "generator",
+						content: Astro.generator,
+					},
+					{ name: "darkreader-lock" },
+				],
+			}}
+		/>
+	</head>
+	<body>
+		<Header />
+
+		<main
+			class="relative me-auto ms-auto flex min-h-[80vh] w-screen flex-1 flex-col items-center justify-center p-5 md:p-20">
+			<slot />
+		</main>
+	</body>
+</html>
