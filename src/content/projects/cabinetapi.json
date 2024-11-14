@@ -1,8 +1,0 @@
-{
-	"name": "CabinetAPI",
-	"order": 3,
-	"description": "A library mod with a bunch of useful utilities for modders.",
-	"icon": "./icon/cabinetapi.png",
-	"link": "https://github.com/CallMeEchoCodes/CabinetAPI",
-	"tags": ["java", "minecraft", "library"]
-}

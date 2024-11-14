@@ -1,0 +1,8 @@
+{
+	"name": "Armistice",
+	"order": 3,
+	"description": "Machines from tomorrow, bringing peace to today. Made for ModFest 1.21",
+	"icon": "./icon/armistice.png",
+	"link": "https://modrinth.com/mod/armistice",
+	"tags": ["minecraft", "java"]
+}
