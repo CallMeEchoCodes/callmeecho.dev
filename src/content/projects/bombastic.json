@@ -1,8 +1,0 @@
-{
-	"name": "Bombastic",
-	"order": 3,
-	"description": "Sending you pipe bombs since 2024. Made for ModFest: Carnival",
-	"icon": "./icon/bombastic.png",
-	"link": "https://modrinth.com/mod/bombastic",
-	"tags": ["minecraft", "java"]
-}

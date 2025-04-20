@@ -1,0 +1,8 @@
+{
+	"name": "Ghost",
+	"order": 3,
+	"description": "Spirit Studios' ephemeral assistant",
+	"icon": "./icon/ghost.png",
+	"link": "https://github.com/SpiritGameStudios/Ghost",
+	"tags": ["discord bot", "java", "jda"]
+}

@@ -4,5 +4,5 @@
 	"description": "Machines from tomorrow, bringing peace to today. Made for ModFest 1.21",
 	"icon": "./icon/armistice.png",
 	"link": "https://modrinth.com/mod/armistice",
-	"tags": ["minecraft", "java"]
+	"tags": ["minecraft", "java", "neoforge"]
 }

@@ -1,0 +1,8 @@
+{
+	"name": "Specter",
+	"order": 2,
+	"description": "A library for Spirit Studios mods.",
+	"icon": "./icon/specter.png",
+	"link": "https://github.com/SpiritGameStudios/Specter",
+	"tags": ["minecraft", "java", "fabricmc"]
+}
